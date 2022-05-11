@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//Payara.fish//DTD Payara Server 4 Resource Definitions//EN" "https://raw.githubusercontent.com/payara/Payara-Server-Documentation/master/schemas/payara-resources_1_6.dtd">
+<resources>
+    <jdbc-resource pool-name="ServicesDB" jndi-name="java:app/jdbc/services-myapp" enabled="true" ></jdbc-resource>
+
+    <jdbc-connection-pool datasource-classname="com.microsoft.sqlserver.jdbc.SQLServerDataSource"     
+                          name="ServicesDB" 
+                          res-type="javax.sql.DataSource"
+                          is-connection-validation-required="true"
+                          connection-validation-method="table"
+                          validation-table-name="sys.tables"
+                          fail-all-connections="true">
+        <property name="User" value="${ENV=DATABASE_USER}"></property>
+        <property name="Password" value="${ENV=DATABASE_PASS}"></property>
+        <property name="DatabaseName" value="${ENV=DATABASE_NAME}"></property>
+        <property name="ServerName" value="${ENV=DATABASE_SERVER}"></property>
+        <property name="PortNumber" value="${ENV=DATABASE_SERVER_PORT}"></property>
+    </jdbc-connection-pool>  
+</resources>

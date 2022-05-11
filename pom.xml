@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.johnmanko.myapp</groupId>
+    <artifactId>payara-micro-plugin-group</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>payara-micro-plugin-group</name>
+  
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <version.payara.micro>5.2022.2</version.payara.micro>
+        <version.payara>5.2022.2</version.payara>
+        <project.dependency.junit.version>4.13.2</project.dependency.junit.version>
+        <project.dependency.gson.version>2.8.5</project.dependency.gson.version>
+        <project.dependency.eclipselink.version>2.7.9</project.dependency.eclipselink.version>
+        <project.dependency.pdfbox.version>2.0.26</project.dependency.pdfbox.version>
+        <project.dependency.guava.version>29.0-jre</project.dependency.guava.version>
+        <project.dependency.javaee-api.version>8.0</project.dependency.javaee-api.version>
+        <project.dependency.jersey.version>2.35</project.dependency.jersey.version>
+        <project.dependency.mssql-jdbc.version>9.4.1.jre8</project.dependency.mssql-jdbc.version>
+    </properties>
+    
+    <build>
+        <plugins>
+            <plugin>                
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.5.1</version>                
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <modules>
+        <module>payara-example-jpa-lib</module>
+        <module>payara-micro-plugin-example</module>
+    </modules>
+</project>

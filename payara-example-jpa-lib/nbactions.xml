@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-clean compile install</actionName>
+            <displayName>clean compile install</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>compile</goal>
+                <goal>install</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-javadoc:javadoc javadoc:jar</actionName>
+            <displayName>javadoc:javadoc javadoc:jar</displayName>
+            <goals>
+                <goal>javadoc:javadoc</goal>
+                <goal>javadoc:jar</goal>
+            </goals>
+        </action>
+    </actions>
