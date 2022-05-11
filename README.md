@@ -7,7 +7,14 @@ Launch the web project `payara-micro-plugin-example` using Netbeans (see content
 Alternatively, use the terminal, changing the values as required:
 
 ```shell
-DATABASE_USER=user DATABASE_PASS=password DATABASE_NAME=MY_DB_NAME DATABASE_SERVER=localhost DATABASE_SERVER_PORT=1234 JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 M2_HOME=/usr/share/maven /usr/share/maven/bin/mvn payara-micro:start
+DATABASE_USER=user \
+DATABASE_PASS=password \
+DATABASE_NAME=MY_DB_NAME \
+DATABASE_SERVER=localhost \
+DATABASE_SERVER_PORT=1234 \
+JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64 \
+M2_HOME=/usr/share/maven \
+/usr/share/maven/bin/mvn payara-micro:start
 ```
 
 The database connection is created via `payara-micro-plugin-example/src/main/webapp/WEB-INF/payara-resources.xml`, where the connection details are plucked from environment variables passed on the commandline.
