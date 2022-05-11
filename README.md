@@ -2,7 +2,7 @@
 
 Launch the web project `payara-micro-plugin-example` using Netbeans (see contents of `nbactions.xml` to change the database values) by right-clicking on the web project and selecting `Run Maven` -> `payara-micro:start (with DB)`:
 
-![Run Netbeans Action](run-nbaction.png "Run Netbeans Action")
+![Run Netbeans Action](run-nb-action.png "Run Netbeans Action")
 
 Alternatively, use the terminal, changing the values as required:
 
