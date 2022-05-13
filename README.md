@@ -33,7 +33,7 @@ java.lang.IllegalArgumentException: Unsupported class file major version 62
 
 To avoid that, there are two ways to specifiy the correct Java version to use when launching Payara Micro.
 
-### Using `javaPath`
+#### Using `javaPath`
 
 One solution is to add the plugin <javaPath> option to the plugin's configuration:
 
@@ -47,6 +47,8 @@ One solution is to add the plugin <javaPath> option to the plugin's configuratio
 ```
 
 The problem with this solution is that if hardcodes the Java path, and makes it rigid when dealing with CD/CI builders or other development/developer machine.  For example, different developers running Windows, MacOS or Linux.
+
+#### Toolchains (preferred)
 
 The preferred solution is to use [Apache Toolchains](https://maven.apache.org/guides/mini/guide-using-toolchains.html).  This requires configuring a `.m2/toolchains.xml` file, and referencing those configurations from the project `pom.xml`.
 
