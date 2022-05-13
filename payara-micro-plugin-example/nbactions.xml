@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
     <action>
-        <actionName>CUSTOM-payara-micro:start</actionName>
-        <displayName>payara-micro:start</displayName>
+        <actionName>CUSTOM-toolchains:toolchain payara-micro:start (with DB)</actionName>
+        <displayName>toolchains:toolchain payara-micro:start (with DB)</displayName>
         <goals>
-            <goal>payara-micro:start</goal>
-        </goals>
-        <properties>
-            <jpda.listen>maven</jpda.listen>
-            <X></X>
-        </properties>
-    </action>
-    <action>
-        <actionName>CUSTOM-payara-micro:start (with DB)</actionName>
-        <displayName>payara-micro:start (with DB)</displayName>
-        <goals>
+            <goal>toolchains:toolchain</goal>
             <goal>payara-micro:start</goal>
         </goals>
         <properties>
@@ -22,7 +12,7 @@
             <Env.DATABASE_PASS>password</Env.DATABASE_PASS>
             <Env.DATABASE_NAME>DATABASE</Env.DATABASE_NAME>
             <Env.DATABASE_SERVER>localhost</Env.DATABASE_SERVER>
-            <Env.DATABASE_SERVER_PORT>1234</Env.DATABASE_SERVER_PORT>
+            <Env.DATABASE_SERVER_PORT>1234</Env.DATABASE_SERVER_PORT>            
         </properties>
     </action>
 </actions>

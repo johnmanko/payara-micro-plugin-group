@@ -78,6 +78,26 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-toolchains-plugin</artifactId>
+                <version>1.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>toolchain</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <toolchains>
+                        <jdk>
+                            <version>1.8</version>
+                            <vendor>openjdk</vendor>
+                        </jdk>
+                    </toolchains>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>fish.payara.maven.plugins</groupId>
                 <artifactId>payara-micro-maven-plugin</artifactId>
                 <version>1.4.0</version>
