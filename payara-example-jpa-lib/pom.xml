@@ -103,10 +103,5 @@
             <artifactId>guava</artifactId>
             <version>${project.dependency.guava.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.pdfbox</groupId>
-            <artifactId>pdfbox</artifactId>
-            <version>${project.dependency.pdfbox.version}</version>
-        </dependency>
     </dependencies>
 </project>
